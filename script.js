@@ -1,6 +1,11 @@
 const jokeElement = document.getElementById('joke')
 const jokeBtn = document.getElementById('jokeBtn')
 
+// Update Joke number
+const jokeNum = document.getElementById('joke-num')
+let num = 0
+
+// when user clicks on button
 jokeBtn.addEventListener('click', generateJoke)
 
 generateJoke()
@@ -19,4 +24,9 @@ async function generateJoke() {
 
     jokeElement.innerHTML = data.joke
 
+    num += 1
+    jokeNum.innerHTML = `${num}`
+
 }
+
+
